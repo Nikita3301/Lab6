@@ -36,7 +36,7 @@ namespace Lab62
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
                 using (StreamWriter f = new StreamWriter(
-                    "C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt",
+                    "C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt",
                     true))
                     f.WriteLine("{0,-31}{1,-16}{2,-15}{3,-5}{4,-20}", Pib, position, date, hours, project);
                 Console.WriteLine("Змiни збережено\n");
@@ -54,7 +54,7 @@ namespace Lab62
             Console.WriteLine("\nЗбереження змін - Enter, відміна - будь-яка інша клавіша.");
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
-                using (StreamWriter f = new StreamWriter("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt"))
+                using (StreamWriter f = new StreamWriter("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt"))
                     for (int i = 0; i < length; i++)
                     {
                         if (i != number - 1) f.WriteLine(str[i]);
@@ -107,8 +107,8 @@ namespace Lab62
         public void Calculation()
         {
             Workday calc = new Workday();
-            int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt").Length;
-            string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt");
+            int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt").Length;
+            string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt");
             Console.WriteLine("{0,-31}{1,-16}{2,-24}{3,-12}{4,-10}", "ПІБ","Посада","Дата","Роб. годин","Год. на проекті");
             for (int i = 0; i < length; i++)
             {
@@ -137,8 +137,8 @@ namespace Lab62
 
         public override void Output()
         {
-            int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt").Length;
-            string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt");
+            int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt").Length;
+            string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt");
             Console.WriteLine("{0,-31}{1,-16}{2,-15}{3,-5}{4,-20}", "ПІБ","Посада","Дата","Год.","Назва проекту");
             for (int i = 0; i < length; i++)
             {
@@ -159,7 +159,7 @@ namespace Lab62
         }
         public override void Delete()
         {
-            int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt").Length;
+            int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt").Length;
             Console.WriteLine("Номер рядку:");
             int number = Checknum(Console.ReadLine());
             while (number > length || number <= 0)
@@ -168,11 +168,11 @@ namespace Lab62
                 number = Checknum(Console.ReadLine());
             }
 
-            string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt");
+            string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt");
             Console.WriteLine("\nЗбереження змін - Enter, відміна - будь-яка інша клавіша.");
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
-                using (StreamWriter f = new StreamWriter("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt"))
+                using (StreamWriter f = new StreamWriter("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt"))
                     for (int i = 0; i < length; i++)
                     {
                         if (i != number - 1) f.WriteLine(str[i]);
@@ -289,7 +289,7 @@ namespace Lab62
                 if (choice.Key == ConsoleKey.E)
                 {
                     Workday edit = new Workday();
-                    int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt").Length;
+                    int length = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt").Length;
                     Console.WriteLine("Номер рядку:");
                     int number = Checknum(Console.ReadLine());
                     while (number > length || number <= 0)
@@ -298,7 +298,7 @@ namespace Lab62
                         number = Checknum(Console.ReadLine());
                     }
 
-                    string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab51\\Lab51\\Coworker.txt");
+                    string[] str = File.ReadAllLines("C:\\Users\\s\\RiderProjects\\Lab62\\Coworker.txt");
                     string line = str[number - 1];
                     edit.Pib = line.Substring(0, 30);
                     edit.position = line.Substring(31, 15);
