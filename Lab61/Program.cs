@@ -25,7 +25,7 @@ namespace Lab61
         {
             
             uint quant,value1;
-            Console.WriteLine("Кiлькiсть виробiв:"); 
+            Console.WriteLine("Кiлькiсть виробiв: "); 
             string quant1 = Console.ReadLine();
             while (!uint.TryParse(quant1, out quant))
             {
