@@ -31,7 +31,7 @@ namespace Lab62
         public void Add(string Pib, string position, string date, int hours, string project )
         {
             Console.WriteLine(
-                "\nЯкщо ви бажаєте зберегти змiни то натиснiть Enter, якщо нi, то будь-яку iншу клавiшу.");
+                "\nЯкщо ви бажаєте зберегти змiни то натиснiть Enter, якщо нi, то будь-яку iншу клавiшу. ");
 
             if (Console.ReadKey().Key == ConsoleKey.Enter)
             {
